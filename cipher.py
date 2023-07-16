@@ -18,12 +18,12 @@ def launch():
 
 
 def execute(mode, message, shift):
+    cipher = ''
     if mode == 'encode':
         cipher = encrypt(message, shift)
-        print(f"Here's the encoded result:  {cipher} ")
     if mode == 'decode':
         cipher = decrypt(message, shift)
-        print(f"Here's the decoded result:  {cipher}")
+    print(f"Here's the {mode}d result:  {cipher}")
 
 
 def encrypt(message, shift):
